@@ -1,0 +1,16 @@
+/* Base styles for Mischief Manager */
+:root {
+    /* Calming colors chosen for ADHD/bipolar friendly interface */
+    --primary-color: #4A90E2;
+    --secondary-color: #82B1FF;
+    --background-color: #F5F7FA;
+    --text-color: #333333;
+}
+
+/* Basic accessibility styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
