@@ -3,6 +3,7 @@
 ## About
 Mischief Manager is a protective app designed to help individuals with ADHD, bipolar disorder, and other mental health conditions avoid predatory advertising and manage impulse spending.
 
+
 ## Features (Planned)
 - [ ] Spending pattern recognition
 - [ ] Cool-down period implementation
