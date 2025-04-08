@@ -1,0 +1,153 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f7f7f7;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #4a90e2, #5f7dbf);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+  background: #fff;
+  padding: 50px 20px;
+}
+
+.features .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  line-height: 1.7;
+}
+
+.features li strong {
+  color: #4a90e2;
+}
+
+/* Call to Action (CTA) */
+.cta {
+  background: #5f7dbf;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cta h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta .btn {
+  background: #4a90e2;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+  background: #3c7ec1;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  .cta h3 {
+      font-size: 1.5rem;
+  }
+
+  .cta p {
+      font-size: 1rem;
+  }
+
+  .features h2 {
+      font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  .cta h3 {
+      font-size: 1.2rem;
+  }
+
+  .cta p {
+      font-size: 0.9rem;
+  }
+
+  .features h2 {
+      font-size: 1.5rem;
+  }
+}
+/* Add any additional styles below */
+/* Custom styles for specific elements */
+/* Example: Customizing the button */
