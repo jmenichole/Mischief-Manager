@@ -1,19 +1,42 @@
 Mischief Manager
 
-Mischief Manager is a protective app designed to help individuals with ADHD, bipolar disorder, and other mental health conditions avoid predatory advertising and balance financial and mental wellbeing. The idea is to help users control impulse spending (think: ADHD-friendly budget boundaries, impulse tracking, etc.)
+Mischief Manager is a habit tracking app designed to help individuals with ADHD, bipolar disorder, and other mental health conditions understand and manage impulse spending through awareness and pattern recognition. The goal is to help users learn their triggers and avoid the actions that lead up to unwanted spending habits.
 
-Features 
+## Core Features ✅
 
-Spending pattern recognition
-Cool-down period implementation
-Ad analysis and blocking
-Mood tracking correlation
-Education/Financial Advice/Mental Health Resources
-Social feed for users to post/share/offer support
-Side Quest- Productive Alternative Suggstions
-Location Reminders for budget
+### Habit Tracking & Pattern Recognition
+- **Impulse Spending Tracker**: Log purchases with detailed emotional context
+- **Trigger Identification**: Track what leads to impulse purchases (emotions, situations, times)
+- **Pattern Analysis**: Automatically identify spending patterns and risk factors
+- **Emotional State Tracking**: Monitor mood, stress, and energy levels during purchases
 
-Currently in early development phase.
+### Real-Time Support
+- **Cool-down Periods**: 5, 10, or 15-minute pause buttons when feeling triggered
+- **Quick Action Buttons**: Fast access to common scenarios (feeling triggered, strong urge, etc.)
+- **Mindful Interventions**: Guided breathing and reflection prompts during cooldowns
+
+### Insights & Learning
+- **Personalized Analytics**: Dashboard showing spending trends and trigger patterns
+- **Time-based Insights**: Identify high-risk times of day for impulse purchases
+- **Success Tracking**: Log and celebrate when you resist impulses
+- **Prevention Strategies**: Actionable recommendations based on your patterns
+
+## Getting Started
+
+```bash
+cd reactSetup
+npm install
+npm run dev
+```
+
+## Technology Stack
+
+- **Frontend**: React + TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+
+Currently in active development. The app uses local state management - data persists during your session but isn't saved permanently yet.
 
 
 
