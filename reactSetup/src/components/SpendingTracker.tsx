@@ -89,21 +89,21 @@ export const SpendingTracker: React.FC<SpendingTrackerProps> = ({
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Track Your Spending</h2>
+        <h2 className="text-2xl font-bold text-mindful-earth-800">✨ Track Your Journey</h2>
         <div className="flex space-x-2">
           <button
             onClick={() => handleStartCooldown(10)}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
+            className="bg-gradient-to-r from-mindful-sky-500 to-mindful-sage-500 hover:from-mindful-sky-600 hover:to-mindful-sage-600 text-white px-6 py-2 rounded-xl flex items-center space-x-2 transition-all duration-200 shadow-md hover:shadow-lg"
           >
             <Clock className="h-4 w-4" />
-            <span>10-min Cooldown</span>
+            <span>🧘‍♀️ 10-min Reflection</span>
           </button>
           <button
             onClick={() => setIsAddingEntry(true)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2"
+            className="bg-gradient-to-r from-mindful-earth-500 to-mindful-coral-500 hover:from-mindful-earth-600 hover:to-mindful-coral-600 text-white px-6 py-2 rounded-xl flex items-center space-x-2 transition-all duration-200 shadow-md hover:shadow-lg"
           >
             <Plus className="h-4 w-4" />
-            <span>Add Entry</span>
+            <span>💝 Add Entry</span>
           </button>
         </div>
       </div>
@@ -112,71 +112,74 @@ export const SpendingTracker: React.FC<SpendingTrackerProps> = ({
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <button 
           onClick={() => handleStartCooldown(5)}
-          className="p-4 bg-yellow-100 border border-yellow-300 rounded-lg hover:bg-yellow-200 text-center"
+          className="p-5 bg-gradient-to-br from-mindful-coral-100 to-mindful-coral-50 border border-mindful-coral-200 rounded-xl hover:from-mindful-coral-200 hover:to-mindful-coral-100 text-center transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          <AlertTriangle className="h-6 w-6 mx-auto mb-2 text-yellow-600" />
-          <p className="text-sm font-medium">Feeling Triggered</p>
-          <p className="text-xs text-gray-600">5-min pause</p>
+          <AlertTriangle className="h-6 w-6 mx-auto mb-2 text-mindful-coral-600" />
+          <p className="text-sm font-medium text-mindful-coral-800">🌊 Feeling Waves</p>
+          <p className="text-xs text-mindful-earth-600">5-min mindful pause</p>
         </button>
         
         <button 
           onClick={() => handleStartCooldown(15)}
-          className="p-4 bg-red-100 border border-red-300 rounded-lg hover:bg-red-200 text-center"
+          className="p-5 bg-gradient-to-br from-mindful-lavender-100 to-mindful-lavender-50 border border-mindful-lavender-200 rounded-xl hover:from-mindful-lavender-200 hover:to-mindful-lavender-100 text-center transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          <DollarSign className="h-6 w-6 mx-auto mb-2 text-red-600" />
-          <p className="text-sm font-medium">Strong Urge</p>
-          <p className="text-xs text-gray-600">15-min pause</p>
+          <DollarSign className="h-6 w-6 mx-auto mb-2 text-mindful-lavender-600" />
+          <p className="text-sm font-medium text-mindful-lavender-800">💫 Strong Pull</p>
+          <p className="text-xs text-mindful-earth-600">15-min reflection</p>
         </button>
         
-        <button className="p-4 bg-green-100 border border-green-300 rounded-lg hover:bg-green-200 text-center">
-          <CheckCircle className="h-6 w-6 mx-auto mb-2 text-green-600" />
-          <p className="text-sm font-medium">Resisted Urge</p>
-          <p className="text-xs text-gray-600">Log success</p>
+        <button className="p-5 bg-gradient-to-br from-mindful-sage-100 to-mindful-sage-50 border border-mindful-sage-200 rounded-xl hover:from-mindful-sage-200 hover:to-mindful-sage-100 text-center transition-all duration-200 shadow-sm hover:shadow-md">
+          <CheckCircle className="h-6 w-6 mx-auto mb-2 text-mindful-sage-600" />
+          <p className="text-sm font-medium text-mindful-sage-800">🌱 Gentle Victory</p>
+          <p className="text-xs text-mindful-earth-600">Celebrate growth</p>
         </button>
         
         <button 
           onClick={() => setIsAddingEntry(true)}
-          className="p-4 bg-blue-100 border border-blue-300 rounded-lg hover:bg-blue-200 text-center"
+          className="p-5 bg-gradient-to-br from-mindful-sky-100 to-mindful-sky-50 border border-mindful-sky-200 rounded-xl hover:from-mindful-sky-200 hover:to-mindful-sky-100 text-center transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          <Plus className="h-6 w-6 mx-auto mb-2 text-blue-600" />
-          <p className="text-sm font-medium">Made Purchase</p>
-          <p className="text-xs text-gray-600">Track it</p>
+          <Plus className="h-6 w-6 mx-auto mb-2 text-mindful-sky-600" />
+          <p className="text-sm font-medium text-mindful-sky-800">📝 Mindful Log</p>
+          <p className="text-xs text-mindful-earth-600">Track with care</p>
         </button>
       </div>
 
       {/* Add Entry Form */}
       {isAddingEntry && (
-        <div className="bg-gray-50 p-6 rounded-lg mb-6">
-          <h3 className="text-lg font-semibold mb-4">Add Spending Entry</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-gradient-to-br from-white/80 via-mindful-sage-50/50 to-mindful-sky-50/50 backdrop-blur-sm p-8 rounded-2xl mb-6 border border-mindful-sage-100/50 shadow-xl">
+          <h3 className="text-xl font-semibold mb-6 text-mindful-earth-800 flex items-center">
+            <span className="mr-2">🌸</span>
+            Mindful Entry
+          </h3>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Amount</label>
+                <label className="block text-sm font-medium text-mindful-earth-700 mb-2">💰 Amount</label>
                 <input
                   type="number"
                   step="0.01"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-mindful-sage-200 rounded-xl focus:ring-2 focus:ring-mindful-sage-400 focus:border-mindful-sage-400 bg-white/60 backdrop-blur-sm transition-all duration-200"
                   required
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                <label className="block text-sm font-medium text-mindful-earth-700 mb-2">🏷️ Category</label>
                 <input
                   type="text"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   placeholder="e.g., Clothing, Food, Entertainment"
-                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full p-3 border border-mindful-sage-200 rounded-xl focus:ring-2 focus:ring-mindful-sage-400 focus:border-mindful-sage-400 bg-white/60 backdrop-blur-sm transition-all duration-200"
                   required
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+              <label className="block text-sm font-medium text-mindful-earth-700 mb-2">📝 Description</label>
               <input
                 type="text"
                 value={description}

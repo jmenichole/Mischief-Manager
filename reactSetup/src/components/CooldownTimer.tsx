@@ -45,10 +45,10 @@ export const CooldownTimer: React.FC<CooldownTimerProps> = ({
   const seconds = Math.floor((timeRemaining - minutes) * 60);
 
   return (
-    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-lg mb-8 shadow-lg">
+    <div className="bg-gradient-to-br from-mindful-sky-400 via-mindful-sage-400 to-mindful-earth-400 text-white p-6 rounded-xl mb-8 shadow-xl border border-white/20">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-3">
-          <div className="bg-white bg-opacity-20 p-2 rounded-full">
+          <div className="bg-white bg-opacity-20 p-3 rounded-full backdrop-blur-sm">
             {isComplete ? (
               <CheckCircle className="h-6 w-6" />
             ) : (
@@ -57,16 +57,16 @@ export const CooldownTimer: React.FC<CooldownTimerProps> = ({
           </div>
           <div>
             <h3 className="text-xl font-bold">
-              {isComplete ? 'Cool-down Complete!' : 'Cool-down Active'}
+              {isComplete ? '🌟 Cool-down Complete!' : '🧘‍♀️ Mindful Pause Active'}
             </h3>
-            <p className="text-orange-100 text-sm">{cooldown.reason}</p>
+            <p className="text-white/80 text-sm">{cooldown.reason}</p>
           </div>
         </div>
         
         {onCancel && !isComplete && (
           <button
             onClick={onCancel}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-colors"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-full transition-all duration-200 backdrop-blur-sm"
           >
             <X className="h-5 w-5" />
           </button>
@@ -75,50 +75,56 @@ export const CooldownTimer: React.FC<CooldownTimerProps> = ({
 
       {!isComplete ? (
         <>
-          <div className="mb-4">
-            <div className="flex justify-between text-sm mb-2">
-              <span>Time remaining</span>
-              <span>{minutes}:{seconds.toString().padStart(2, '0')}</span>
+          <div className="mb-6">
+            <div className="flex justify-between text-sm mb-3">
+              <span className="text-white/90">Time remaining</span>
+              <span className="font-mono text-white">{minutes}:{seconds.toString().padStart(2, '0')}</span>
             </div>
-            <div className="bg-white bg-opacity-20 rounded-full h-3">
+            <div className="bg-white/20 rounded-full h-4 backdrop-blur-sm">
               <div
-                className="bg-white h-3 rounded-full transition-all duration-1000 ease-linear"
+                className="bg-gradient-to-r from-white via-mindful-sage-100 to-white h-4 rounded-full transition-all duration-1000 ease-linear shadow-inner"
                 style={{ width: `${progress}%` }}
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="bg-white bg-opacity-10 p-3 rounded-lg">
-              <h4 className="font-semibold mb-1">Take Deep Breaths</h4>
-              <p>Focus on slow, controlled breathing to reduce impulse intensity.</p>
+            <div className="bg-white/15 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+              <h4 className="font-semibold mb-2 text-white flex items-center">
+                🫁 <span className="ml-2">Take Deep Breaths</span>
+              </h4>
+              <p className="text-white/90">Focus on slow, mindful breathing to create space between impulse and action.</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 p-3 rounded-lg">
-              <h4 className="font-semibold mb-1">Ask Yourself</h4>
-              <p>"Do I really need this? How will I feel about it tomorrow?"</p>
+            <div className="bg-white/15 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+              <h4 className="font-semibold mb-2 text-white flex items-center">
+                💭 <span className="ml-2">Gentle Reflection</span>
+              </h4>
+              <p className="text-white/90">"What am I really seeking? How might my future self feel about this choice?"</p>
             </div>
             
-            <div className="bg-white bg-opacity-10 p-3 rounded-lg">
-              <h4 className="font-semibold mb-1">Alternative Activity</h4>
-              <p>Go for a walk, call a friend, or engage in a hobby instead.</p>
+            <div className="bg-white/15 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+              <h4 className="font-semibold mb-2 text-white flex items-center">
+                🌱 <span className="ml-2">Nurturing Alternative</span>
+              </h4>
+              <p className="text-white/90">Connect with nature, reach out to loved ones, or engage in a creative activity.</p>
             </div>
           </div>
         </>
       ) : (
         <div className="text-center">
-          <p className="text-lg mb-4">
-            Great job taking time to pause and reflect! How are you feeling now?
+          <p className="text-lg mb-6 text-white/95">
+            🌟 Wonderful! You've created space for mindful reflection. How are you feeling in this moment?
           </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-              Still want to buy
+          <div className="flex flex-wrap justify-center gap-3">
+            <button className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/20">
+              Still interested
             </button>
-            <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-              Changed my mind
+            <button className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/20">
+              Feeling grateful I waited
             </button>
-            <button className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-              Need more time
+            <button className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl transition-all duration-200 backdrop-blur-sm border border-white/20">
+              Need more reflection time
             </button>
           </div>
         </div>

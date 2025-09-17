@@ -30,53 +30,53 @@ export const HabitTracker: React.FC<HabitTrackerProps> = ({
   const isCooldownActive = cooldownPeriod ? isCoolDownActive(cooldownPeriod) : false;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-mindful-sage-50 via-mindful-sky-50 to-mindful-earth-50 p-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">Mischief Manager</h1>
-          <p className="text-lg text-gray-600">Understanding your impulse spending patterns</p>
+          <h1 className="text-4xl font-bold text-mindful-earth-800 mb-2">Mischief Manager</h1>
+          <p className="text-lg text-mindful-earth-600">Your mindful companion for understanding spending patterns</p>
         </div>
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-mindful-sage-100">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Total Tracked</p>
-                <p className="text-2xl font-bold text-gray-900">{formatCurrency(totalSpent)}</p>
+                <p className="text-sm font-medium text-mindful-earth-600">Total Tracked</p>
+                <p className="text-2xl font-bold text-mindful-earth-800">{formatCurrency(totalSpent)}</p>
               </div>
-              <TrendingUp className="h-8 w-8 text-blue-600" />
+              <TrendingUp className="h-8 w-8 text-mindful-sky-500" />
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-mindful-coral-100">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Impulse Spending</p>
-                <p className="text-2xl font-bold text-red-600">{formatCurrency(impulsiveSpent)}</p>
+                <p className="text-sm font-medium text-mindful-earth-600">Impulse Spending</p>
+                <p className="text-2xl font-bold text-mindful-coral-600">{formatCurrency(impulsiveSpent)}</p>
               </div>
-              <AlertCircle className="h-8 w-8 text-red-600" />
+              <AlertCircle className="h-8 w-8 text-mindful-coral-500" />
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-mindful-sage-100">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Entries This Week</p>
-                <p className="text-2xl font-bold text-gray-900">{entries.length}</p>
+                <p className="text-sm font-medium text-mindful-earth-600">Entries This Week</p>
+                <p className="text-2xl font-bold text-mindful-earth-800">{entries.length}</p>
               </div>
-              <Brain className="h-8 w-8 text-green-600" />
+              <Brain className="h-8 w-8 text-mindful-sage-500" />
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-mindful-lavender-100">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Active Insights</p>
-                <p className="text-2xl font-bold text-purple-600">{insights.length}</p>
+                <p className="text-sm font-medium text-mindful-earth-600">Active Insights</p>
+                <p className="text-2xl font-bold text-mindful-lavender-600">{insights.length}</p>
               </div>
-              <Clock className="h-8 w-8 text-purple-600" />
+              <Clock className="h-8 w-8 text-mindful-lavender-500" />
             </div>
           </div>
         </div>
@@ -87,33 +87,33 @@ export const HabitTracker: React.FC<HabitTrackerProps> = ({
         )}
 
         {/* Navigation Tabs */}
-        <div className="flex space-x-1 bg-gray-200 p-1 rounded-lg mb-8">
+        <div className="flex space-x-1 bg-mindful-sage-100/50 p-1 rounded-xl mb-8 backdrop-blur-sm">
           <button
             onClick={() => setActiveView('tracker')}
-            className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
+            className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
               activeView === 'tracker'
-                ? 'bg-white text-blue-600 shadow-sm'
-                : 'text-gray-600 hover:text-gray-800'
+                ? 'bg-white/90 text-mindful-sage-700 shadow-lg backdrop-blur-sm'
+                : 'text-mindful-earth-600 hover:text-mindful-earth-800 hover:bg-white/30'
             }`}
           >
             Track Spending
           </button>
           <button
             onClick={() => setActiveView('triggers')}
-            className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
+            className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
               activeView === 'triggers'
-                ? 'bg-white text-blue-600 shadow-sm'
-                : 'text-gray-600 hover:text-gray-800'
+                ? 'bg-white/90 text-mindful-sage-700 shadow-lg backdrop-blur-sm'
+                : 'text-mindful-earth-600 hover:text-mindful-earth-800 hover:bg-white/30'
             }`}
           >
             Identify Triggers
           </button>
           <button
             onClick={() => setActiveView('insights')}
-            className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
+            className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
               activeView === 'insights'
-                ? 'bg-white text-blue-600 shadow-sm'
-                : 'text-gray-600 hover:text-gray-800'
+                ? 'bg-white/90 text-mindful-sage-700 shadow-lg backdrop-blur-sm'
+                : 'text-mindful-earth-600 hover:text-mindful-earth-800 hover:bg-white/30'
             }`}
           >
             Your Insights
